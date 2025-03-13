@@ -1,0 +1,15 @@
+syntax = "proto3"
+
+package user;
+
+// 导入消息定义
+import "message.proto"
+
+// 定义用户服务
+service UserService {
+    // 获取用户列表
+    rpc GetUserList (UserListRequest) returns (UserListResponse) {}
+
+    // 获取用户信息
+    rpc GetUserInfo (GetUserRequest) returns (GetUserResponse) {}
+}
