@@ -3,7 +3,7 @@ syntax = "proto3"
 package user;
 
 // 导入消息定义
-import "message.proto"
+import "message.proto";
 
 // 定义用户服务
 service UserService {
