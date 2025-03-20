@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package order;
+
+option go_package = "ginapi/app/gen/order";
+
+message UserListRequest {
+  int64 page = 1;
+  int64 page_size = 2;
+}
+
+message UserListResponse {
+  int64 total = 1;
+  repeated User users = 2;
+}
+
+message UserInfoRequest {
+  int64 id = 1;
+}
+
+message UserInfoResponse {
+  int64 id = 1;
+  string name = 2;
+}
+
+
+message User {
+  int64 id = 1;
+  string name = 2;
+}
