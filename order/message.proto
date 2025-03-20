@@ -4,27 +4,27 @@ package order;
 
 option go_package = "ginapi/app/gen/order";
 
-message UserListRequest {
+message OrderListRequest {
   int64 page = 1;
   int64 page_size = 2;
 }
 
-message UserListResponse {
+message OrderListResponse {
   int64 total = 1;
-  repeated User users = 2;
+  repeated Order orders = 2;
 }
 
-message UserInfoRequest {
+message OrderInfoRequest {
   int64 id = 1;
 }
 
-message UserInfoResponse {
+message OrderInfoResponse {
   int64 id = 1;
-  string name = 2;
+  string number = 2;
 }
 
 
-message User {
+message Order {
   int64 id = 1;
-  string name = 2;
+  string number = 2;
 }

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package order;
+
+option go_package = "ginapi/app/gen/order";
+
+// 导入拆分后的消息体
+import "app/proto/order/message.proto";
+
+// 定义用户服务
+service OrderService {
+    // 获取用户列表
+    rpc GetOrderList (OrderListRequest) returns (OrderListResponse) {}
+
+    // 获取用户信息
+    rpc GetOrderInfo (OrderInfoRequest) returns (OrderInfoResponse) {}
+}
